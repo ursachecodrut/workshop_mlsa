@@ -58216,38 +58216,98 @@ var version = "0.12.7",
   tfjs: version
 };
 exports.version = version$1;
-},{"@tensorflow/tfjs-core":"node_modules/@tensorflow/tfjs-core/dist/tf-core.esm.js","@tensorflow/tfjs-layers":"node_modules/@tensorflow/tfjs-layers/dist/tf-layers.esm.js","@tensorflow/tfjs-converter":"node_modules/@tensorflow/tfjs-converter/dist/tf-converter.esm.js"}],"data/pretrained-model-data/drum.jpg":[function(require,module,exports) {
-module.exports = "/drum.22c69e66.jpg";
-},{}],"data/colors/training/blue/blue-1.png":[function(require,module,exports) {
-module.exports = "/blue-1.2462962c.png";
-},{}],"data/colors/training/blue/blue-2.png":[function(require,module,exports) {
-module.exports = "/blue-2.3c37f116.png";
-},{}],"data/colors/validation/blue/blue-3.png":[function(require,module,exports) {
-module.exports = "/blue-3.b9621486.png";
-},{}],"data/colors/training/red/red-1.png":[function(require,module,exports) {
-module.exports = "/red-1.84c6c234.png";
-},{}],"data/colors/training/red/red-2.png":[function(require,module,exports) {
-module.exports = "/red-2.0d052930.png";
-},{}],"data/colors/validation/red/red-3.png":[function(require,module,exports) {
-module.exports = "/red-3.5c7eb868.png";
+},{"@tensorflow/tfjs-core":"node_modules/@tensorflow/tfjs-core/dist/tf-core.esm.js","@tensorflow/tfjs-layers":"node_modules/@tensorflow/tfjs-layers/dist/tf-layers.esm.js","@tensorflow/tfjs-converter":"node_modules/@tensorflow/tfjs-converter/dist/tf-converter.esm.js"}],"data/pexel-images/training/mobile/phone1.jpg":[function(require,module,exports) {
+module.exports = "/phone1.7ac78ee2.jpg";
+},{}],"data/pexel-images/training/mobile/phone2.jpg":[function(require,module,exports) {
+module.exports = "/phone2.fc9f8159.jpg";
+},{}],"data/pexel-images/training/mobile/phone3.jpg":[function(require,module,exports) {
+module.exports = "/phone3.46a83668.jpg";
+},{}],"data/pexel-images/training/mobile/phone4.jpg":[function(require,module,exports) {
+module.exports = "/phone4.d6532f61.jpg";
+},{}],"data/pexel-images/training/mobile/phone5.jpg":[function(require,module,exports) {
+module.exports = "/phone5.4cc7cdd7.jpg";
+},{}],"data/pexel-images/training/mobile/phone6.jpg":[function(require,module,exports) {
+module.exports = "/phone6.76649827.jpg";
+},{}],"data/pexel-images/training/mobile/phone7.jpg":[function(require,module,exports) {
+module.exports = "/phone7.99667503.jpg";
+},{}],"data/pexel-images/training/mobile/phone8.jpg":[function(require,module,exports) {
+module.exports = "/phone8.624dd4bf.jpg";
+},{}],"data/pexel-images/training/mobile/phone9.jpg":[function(require,module,exports) {
+module.exports = "/phone9.38250082.jpg";
+},{}],"data/pexel-images/training/mobile/phone10.jpg":[function(require,module,exports) {
+module.exports = "/phone10.aa33182e.jpg";
+},{}],"data/pexel-images/training/notebook/note1.jpg":[function(require,module,exports) {
+module.exports = "/note1.d378213c.jpg";
+},{}],"data/pexel-images/training/notebook/note2.jpg":[function(require,module,exports) {
+module.exports = "/note2.1724c116.jpg";
+},{}],"data/pexel-images/training/notebook/note3.jpg":[function(require,module,exports) {
+module.exports = "/note3.07191215.jpg";
+},{}],"data/pexel-images/training/notebook/note4.jpg":[function(require,module,exports) {
+module.exports = "/note4.6a4dc8fd.jpg";
+},{}],"data/pexel-images/training/notebook/note5.jpg":[function(require,module,exports) {
+module.exports = "/note5.df04404c.jpg";
+},{}],"data/pexel-images/training/notebook/note6.jpg":[function(require,module,exports) {
+module.exports = "/note6.57e6e878.jpg";
+},{}],"data/pexel-images/training/notebook/note7.jpg":[function(require,module,exports) {
+module.exports = "/note7.d9c6ffc6.jpg";
+},{}],"data/pexel-images/training/notebook/note8.jpg":[function(require,module,exports) {
+module.exports = "/note8.3cf3d28f.jpg";
+},{}],"data/pexel-images/training/notebook/note9.jpg":[function(require,module,exports) {
+module.exports = "/note9.49af9397.jpg";
+},{}],"data/pexel-images/training/notebook/note10.jpg":[function(require,module,exports) {
+module.exports = "/note10.f00e20b2.jpg";
+},{}],"data/pexel-images/validation/notebook/note_val1.jpg":[function(require,module,exports) {
+module.exports = "/note_val1.11652504.jpg";
+},{}],"data/pexel-images/validation/mobile/phone_val1.jpg":[function(require,module,exports) {
+module.exports = "/phone_val1.3b07a0e6.jpg";
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var tf = _interopRequireWildcard(require("@tensorflow/tfjs"));
 
-var _drum = _interopRequireDefault(require("./data/pretrained-model-data/drum.jpg"));
+var _phone = _interopRequireDefault(require("./data/pexel-images/training/mobile/phone1.jpg"));
 
-var _blue = _interopRequireDefault(require("./data/colors/training/blue/blue-1.png"));
+var _phone2 = _interopRequireDefault(require("./data/pexel-images/training/mobile/phone2.jpg"));
 
-var _blue2 = _interopRequireDefault(require("./data/colors/training/blue/blue-2.png"));
+var _phone3 = _interopRequireDefault(require("./data/pexel-images/training/mobile/phone3.jpg"));
 
-var _blue3 = _interopRequireDefault(require("./data/colors/validation/blue/blue-3.png"));
+var _phone4 = _interopRequireDefault(require("./data/pexel-images/training/mobile/phone4.jpg"));
 
-var _red = _interopRequireDefault(require("./data/colors/training/red/red-1.png"));
+var _phone5 = _interopRequireDefault(require("./data/pexel-images/training/mobile/phone5.jpg"));
 
-var _red2 = _interopRequireDefault(require("./data/colors/training/red/red-2.png"));
+var _phone6 = _interopRequireDefault(require("./data/pexel-images/training/mobile/phone6.jpg"));
 
-var _red3 = _interopRequireDefault(require("./data/colors/validation/red/red-3.png"));
+var _phone7 = _interopRequireDefault(require("./data/pexel-images/training/mobile/phone7.jpg"));
+
+var _phone8 = _interopRequireDefault(require("./data/pexel-images/training/mobile/phone8.jpg"));
+
+var _phone9 = _interopRequireDefault(require("./data/pexel-images/training/mobile/phone9.jpg"));
+
+var _phone10 = _interopRequireDefault(require("./data/pexel-images/training/mobile/phone10.jpg"));
+
+var _note = _interopRequireDefault(require("./data/pexel-images/training/notebook/note1.jpg"));
+
+var _note2 = _interopRequireDefault(require("./data/pexel-images/training/notebook/note2.jpg"));
+
+var _note3 = _interopRequireDefault(require("./data/pexel-images/training/notebook/note3.jpg"));
+
+var _note4 = _interopRequireDefault(require("./data/pexel-images/training/notebook/note4.jpg"));
+
+var _note5 = _interopRequireDefault(require("./data/pexel-images/training/notebook/note5.jpg"));
+
+var _note6 = _interopRequireDefault(require("./data/pexel-images/training/notebook/note6.jpg"));
+
+var _note7 = _interopRequireDefault(require("./data/pexel-images/training/notebook/note7.jpg"));
+
+var _note8 = _interopRequireDefault(require("./data/pexel-images/training/notebook/note8.jpg"));
+
+var _note9 = _interopRequireDefault(require("./data/pexel-images/training/notebook/note9.jpg"));
+
+var _note10 = _interopRequireDefault(require("./data/pexel-images/training/notebook/note10.jpg"));
+
+var _note_val = _interopRequireDefault(require("./data/pexel-images/validation/notebook/note_val1.jpg"));
+
+var _phone_val = _interopRequireDefault(require("./data/pexel-images/validation/mobile/phone_val1.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -58255,8 +58315,9 @@ function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "functio
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-var training = [_blue.default, _blue2.default, _red.default, _red2.default];
-var labels = ['blue', 'blue', 'red', 'red'];
+// import note_val2 from './data/pexel-images/validation/notebook/note_val2.jpg';
+var training = [_phone.default, _phone2.default, _phone3.default, _phone4.default, _phone5.default, _phone6.default, _phone7.default, _phone8.default, _phone9.default, _phone10.default, _note.default, _note2.default, _note3.default, _note4.default, _note5.default, _note6.default, _note7.default, _note8.default, _note9.default, _note10.default];
+var labels = ['phone', 'phone', 'phone', 'phone', 'phone', 'phone', 'phone', 'phone', 'phone', 'phone', 'note', 'note', 'note', 'note', 'note', 'note', 'note', 'note', 'note', 'note'];
 
 function loadMobilenet() {
   return tf.loadModel('https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json');
@@ -58308,7 +58369,7 @@ function loadAndProcessImage(image) {
   var batchedImage = batchImage(resizedImage);
   return batchedImage;
 } // loadMobilenet().then((pretrainedModel) => {
-// 	loadImage(drum).then((img) => {
+// 	loadImage(chitara).then((img) => {
 // 		const processedImage = loadAndProcessImage(img);
 // 		const prediction = pretrainedModel.predict(processedImage);
 // 		// Because of the way Tensorflow.js works, you must call print on a Tensor instead of console.log.
@@ -58440,7 +58501,7 @@ function getModel(numberOfClasses) {
   return model;
 }
 
-function makePrediction(pretrainedModel, image, expectedLabel) {
+function makePrediction(pretrainedModel, image, expectedLabel, model) {
   loadImage(image).then(function (loadedImage) {
     return loadAndProcessImage(loadedImage);
   }).then(function (loadedImage) {
@@ -58466,10 +58527,10 @@ buildPretrainedModel().then(function (pretrainedModel) {
       shuffle: true
     }).then(function (history) {
       // make predictions
-      makePrediction(pretrainedModel, _blue3.default, '0');
-      makePrediction(pretrainedModel, _red3.default, '1');
+      makePrediction(pretrainedModel, _phone_val.default, '0', model);
+      makePrediction(pretrainedModel, _note_val.default, '1', model);
     });
   });
 });
-},{"@tensorflow/tfjs":"node_modules/@tensorflow/tfjs/dist/tf.esm.js","./data/pretrained-model-data/drum.jpg":"data/pretrained-model-data/drum.jpg","./data/colors/training/blue/blue-1.png":"data/colors/training/blue/blue-1.png","./data/colors/training/blue/blue-2.png":"data/colors/training/blue/blue-2.png","./data/colors/validation/blue/blue-3.png":"data/colors/validation/blue/blue-3.png","./data/colors/training/red/red-1.png":"data/colors/training/red/red-1.png","./data/colors/training/red/red-2.png":"data/colors/training/red/red-2.png","./data/colors/validation/red/red-3.png":"data/colors/validation/red/red-3.png"}]},{},["index.js"], null)
+},{"@tensorflow/tfjs":"node_modules/@tensorflow/tfjs/dist/tf.esm.js","./data/pexel-images/training/mobile/phone1.jpg":"data/pexel-images/training/mobile/phone1.jpg","./data/pexel-images/training/mobile/phone2.jpg":"data/pexel-images/training/mobile/phone2.jpg","./data/pexel-images/training/mobile/phone3.jpg":"data/pexel-images/training/mobile/phone3.jpg","./data/pexel-images/training/mobile/phone4.jpg":"data/pexel-images/training/mobile/phone4.jpg","./data/pexel-images/training/mobile/phone5.jpg":"data/pexel-images/training/mobile/phone5.jpg","./data/pexel-images/training/mobile/phone6.jpg":"data/pexel-images/training/mobile/phone6.jpg","./data/pexel-images/training/mobile/phone7.jpg":"data/pexel-images/training/mobile/phone7.jpg","./data/pexel-images/training/mobile/phone8.jpg":"data/pexel-images/training/mobile/phone8.jpg","./data/pexel-images/training/mobile/phone9.jpg":"data/pexel-images/training/mobile/phone9.jpg","./data/pexel-images/training/mobile/phone10.jpg":"data/pexel-images/training/mobile/phone10.jpg","./data/pexel-images/training/notebook/note1.jpg":"data/pexel-images/training/notebook/note1.jpg","./data/pexel-images/training/notebook/note2.jpg":"data/pexel-images/training/notebook/note2.jpg","./data/pexel-images/training/notebook/note3.jpg":"data/pexel-images/training/notebook/note3.jpg","./data/pexel-images/training/notebook/note4.jpg":"data/pexel-images/training/notebook/note4.jpg","./data/pexel-images/training/notebook/note5.jpg":"data/pexel-images/training/notebook/note5.jpg","./data/pexel-images/training/notebook/note6.jpg":"data/pexel-images/training/notebook/note6.jpg","./data/pexel-images/training/notebook/note7.jpg":"data/pexel-images/training/notebook/note7.jpg","./data/pexel-images/training/notebook/note8.jpg":"data/pexel-images/training/notebook/note8.jpg","./data/pexel-images/training/notebook/note9.jpg":"data/pexel-images/training/notebook/note9.jpg","./data/pexel-images/training/notebook/note10.jpg":"data/pexel-images/training/notebook/note10.jpg","./data/pexel-images/validation/notebook/note_val1.jpg":"data/pexel-images/validation/notebook/note_val1.jpg","./data/pexel-images/validation/mobile/phone_val1.jpg":"data/pexel-images/validation/mobile/phone_val1.jpg"}]},{},["index.js"], null)
 //# sourceMappingURL=/workshop.e31bb0bc.js.map

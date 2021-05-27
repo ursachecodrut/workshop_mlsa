@@ -1,15 +1,74 @@
 import * as tf from '@tensorflow/tfjs';
-import drum from './data/pretrained-model-data/drum.jpg';
-import blue1 from './data/colors/training/blue/blue-1.png';
-import blue2 from './data/colors/training/blue/blue-2.png';
-import blue3 from './data/colors/validation/blue/blue-3.png';
-import red1 from './data/colors/training/red/red-1.png';
-import red2 from './data/colors/training/red/red-2.png';
-import red3 from './data/colors/validation/red/red-3.png';
+import phone1 from './data/pexel-images/training/mobile/phone1.jpg';
+import phone2 from './data/pexel-images/training/mobile/phone2.jpg';
+import phone3 from './data/pexel-images/training/mobile/phone3.jpg';
+import phone4 from './data/pexel-images/training/mobile/phone4.jpg';
+import phone5 from './data/pexel-images/training/mobile/phone5.jpg';
+import phone6 from './data/pexel-images/training/mobile/phone6.jpg';
+import phone7 from './data/pexel-images/training/mobile/phone7.jpg';
+import phone8 from './data/pexel-images/training/mobile/phone8.jpg';
+import phone9 from './data/pexel-images/training/mobile/phone9.jpg';
+import phone10 from './data/pexel-images/training/mobile/phone10.jpg';
+import note1 from './data/pexel-images/training/notebook/note1.jpg';
+import note2 from './data/pexel-images/training/notebook/note2.jpg';
+import note3 from './data/pexel-images/training/notebook/note3.jpg';
+import note4 from './data/pexel-images/training/notebook/note4.jpg';
+import note5 from './data/pexel-images/training/notebook/note5.jpg';
+import note6 from './data/pexel-images/training/notebook/note6.jpg';
+import note7 from './data/pexel-images/training/notebook/note7.jpg';
+import note8 from './data/pexel-images/training/notebook/note8.jpg';
+import note9 from './data/pexel-images/training/notebook/note9.jpg';
+import note10 from './data/pexel-images/training/notebook/note10.jpg';
+import note_val1 from './data/pexel-images/validation/notebook/note_val1.jpg';
+import phone_val1 from './data/pexel-images/validation/mobile/phone_val1.jpg';
 
-const training = [blue1, blue2, red1, red2];
+// import note_val2 from './data/pexel-images/validation/notebook/note_val2.jpg';
 
-const labels = ['blue', 'blue', 'red', 'red'];
+const training = [
+	phone1,
+	phone2,
+	phone3,
+	phone4,
+	phone5,
+	phone6,
+	phone7,
+	phone8,
+	phone9,
+	phone10,
+	note1,
+	note2,
+	note3,
+	note4,
+	note5,
+	note6,
+	note7,
+	note8,
+	note9,
+	note10,
+];
+
+const labels = [
+	'phone',
+	'phone',
+	'phone',
+	'phone',
+	'phone',
+	'phone',
+	'phone',
+	'phone',
+	'phone',
+	'phone',
+	'note',
+	'note',
+	'note',
+	'note',
+	'note',
+	'note',
+	'note',
+	'note',
+	'note',
+	'note',
+];
 
 function loadMobilenet() {
 	return tf.loadModel(
@@ -66,7 +125,7 @@ function loadAndProcessImage(image) {
 }
 
 // loadMobilenet().then((pretrainedModel) => {
-// 	loadImage(drum).then((img) => {
+// 	loadImage(chitara).then((img) => {
 // 		const processedImage = loadAndProcessImage(img);
 // 		const prediction = pretrainedModel.predict(processedImage);
 
@@ -193,7 +252,7 @@ function getModel(numberOfClasses) {
 	return model;
 }
 
-function makePrediction(pretrainedModel, image, expectedLabel) {
+function makePrediction(pretrainedModel, image, expectedLabel, model) {
 	loadImage(image)
 		.then((loadedImage) => {
 			return loadAndProcessImage(loadedImage);
@@ -228,8 +287,8 @@ buildPretrainedModel().then((pretrainedModel) => {
 			})
 			.then((history) => {
 				// make predictions
-				makePrediction(pretrainedModel, blue3, '0');
-				makePrediction(pretrainedModel, red3, '1');
+				makePrediction(pretrainedModel, phone_val1, '0', model);
+				makePrediction(pretrainedModel, note_val1, '1', model);
 			});
 	});
 });
